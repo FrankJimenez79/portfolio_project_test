@@ -1,2 +1,56 @@
 @use "../abstracts/_variables" as *;
 @use "../abstracts/_mixins" as *;
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 50px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid white;
+    z-index: 0;
+    opacity: 0.5;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 150px;
+    height: 150px;
+    background-image: url("img/img-oval.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__image {
+    margin-bottom: 40px;
+    position: relative;
+  }
+  &__title {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: -1.136px;
+    text-align: center;
+    color: $white;
+    margin-bottom: 24px;
+  }
+  &__subtitle {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+    margin-bottom: 24px;
+  }
+}
