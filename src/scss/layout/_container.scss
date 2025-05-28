@@ -3,4 +3,18 @@
 
 div.container {
   padding: 30px;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+
+    top: 101px;
+    left: -290px;
+    width: 530px;
+    height: 200px;
+    background-image: url("img/img-oval.png");
+    opacity: 0.5;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }

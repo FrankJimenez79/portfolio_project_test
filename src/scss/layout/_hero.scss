@@ -7,37 +7,27 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  margin-bottom: 100px;
 
   &::after {
     content: "";
     position: absolute;
-    top: 0;
-    right: 50px;
-    width: 200px;
-    height: 200px;
+    top: 83px;
+    right: -104px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     border: 2px solid white;
     z-index: 0;
     opacity: 0.5;
-  }
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -50px;
-    width: 150px;
-    height: 150px;
-    background-image: url("img/img-oval.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
   }
 
   &__image {
     margin-bottom: 40px;
     position: relative;
   }
-  &__title {
+  &__title,
+  &__title span {
     font-size: 40px;
     font-weight: 700;
     line-height: 40px;
@@ -45,6 +35,11 @@
     text-align: center;
     color: $white;
     margin-bottom: 24px;
+    span {
+      text-decoration: underline;
+      text-decoration-color: $green;
+      text-underline-offset: 8px;
+    }
   }
   &__subtitle {
     text-align: center;
@@ -52,5 +47,11 @@
     font-weight: 500;
     line-height: 26px;
     margin-bottom: 24px;
+  }
+  &__button a {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 2.28px;
   }
 }

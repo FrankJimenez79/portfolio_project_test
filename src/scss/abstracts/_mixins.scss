@@ -25,3 +25,11 @@
     }
   }
 }
+
+@mixin button {
+  display: block;
+  text-decoration: underline;
+  text-decoration-color: $green;
+  text-underline-offset: 12px;
+  text-decoration-thickness: 4px;
+}
