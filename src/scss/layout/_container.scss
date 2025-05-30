@@ -4,9 +4,26 @@
 div.container {
   padding: 30px;
   position: relative;
+  overflow: hidden;
+  max-width: 430px;
+  margin-left: auto;
+  margin-right: auto;
   img.spiral {
     position: absolute;
     top: 150px;
     left: -197px;
+    @include breakpoint(tablet) {
+      top: 69px;
+    }
+  }
+  @include breakpoint(tablet) {
+    max-width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    background-image: url(img/img-adam.png);
+    background-position: top right;
+    background-size: 340px;
+    background-repeat: no-repeat;
   }
 }

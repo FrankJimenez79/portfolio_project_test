@@ -9,11 +9,21 @@
   align-items: center;
   margin-bottom: 50px;
   gap: 20px;
+  @include breakpoint(tablet) {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+    margin-bottom: 70px;
+  }
   &__logo img {
     width: 130px;
   }
   &__icons {
     display: flex;
     gap: 26px;
+
+    @include breakpoint(tablet) {
+      gap: 32px;
+    }
   }
 }

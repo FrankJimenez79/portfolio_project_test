@@ -8,6 +8,12 @@
   align-items: center;
   position: relative;
   margin-bottom: 100px;
+  @include breakpoint(tablet) {
+    align-items: start;
+    justify-content: start;
+    width: 66%;
+    margin-bottom: 72px;
+  }
 
   &::after {
     content: "";
@@ -20,12 +26,23 @@
     border: 2px solid white;
     z-index: 0;
     opacity: 0.5;
+    @include breakpoint(tablet) {
+      top: 290px;
+      right: -330px;
+      border: 3px solid white;
+      width: 125px;
+      height: 125px;
+    }
   }
 
   &__image {
     margin-bottom: 40px;
     position: relative;
+    @include breakpoint(tablet) {
+      display: none;
+    }
   }
+
   &__title,
   &__title span {
     font-size: 40px;
@@ -35,10 +52,20 @@
     text-align: center;
     color: $white;
     margin-bottom: 24px;
+    @include breakpoint(tablet) {
+      text-align: start;
+      font-size: 72px;
+      line-height: 72px;
+      letter-spacing: 2.04px;
+      margin-bottom: 66px;
+    }
     span {
       text-decoration: underline;
       text-decoration-color: $green;
       text-underline-offset: 8px;
+      @include breakpoint(tablet) {
+        text-underline-offset: 14px;
+      }
     }
   }
   &__subtitle {
@@ -47,11 +74,23 @@
     font-weight: 500;
     line-height: 26px;
     margin-bottom: 24px;
+    color: $grey;
+    @include breakpoint(tablet) {
+      text-align: start;
+      font-size: 20px;
+      line-height: 28px;
+      margin-bottom: 32px;
+    }
   }
   &__button a {
     text-transform: uppercase;
     font-size: 16px;
     font-weight: 700;
     letter-spacing: 2.28px;
+    text-align: center;
+    @include breakpoint(tablet) {
+      text-align: start;
+      font-size: 18px;
+    }
   }
 }

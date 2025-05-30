@@ -15,9 +15,20 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 40px;
+    @include breakpoint(tablet) {
+      margin-bottom: 60px;
+    }
     &__title {
       font-size: 40px;
       font-weight: 700;
+      @include breakpoint(tablet) {
+        font-size: 72px;
+      }
+    }
+    .button {
+      @include breakpoint(tablet) {
+        font-size: 18px;
+      }
     }
   }
   &__article {
@@ -47,5 +58,10 @@
       display: flex;
       gap: 32px;
     }
+  }
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
   }
 }
