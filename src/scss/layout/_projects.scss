@@ -5,6 +5,9 @@
   margin-top: 80px;
   margin-bottom: 92px;
   position: relative;
+  @include breakpoint(tablet) {
+    margin-bottom: 172px;
+  }
   img.spiral-projects {
     position: absolute;
     right: -120px;
