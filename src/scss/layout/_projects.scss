@@ -8,10 +8,17 @@
   @include breakpoint(tablet) {
     margin-bottom: 172px;
   }
+  @include breakpoint(desktop) {
+    margin-bottom: 200px;
+  }
   img.spiral-projects {
     position: absolute;
     right: -120px;
     top: -150px;
+    @include breakpoint(desktop) {
+      right: -250px;
+      top: -190px;
+    }
   }
   &__header {
     display: flex;
@@ -34,19 +41,32 @@
       }
     }
   }
+
   &__article {
     margin-bottom: 52px;
+
+    @include breakpoint(desktop) {
+      position: relative;
+    }
 
     &__img {
       max-width: 100%;
       margin-bottom: 20px;
+
+      @include breakpoint(desktop) {
+        position: relative;
+        display: block;
+        transition: filter 0.3s ease;
+      }
     }
+
     &__title {
       font-size: 24px;
       text-transform: uppercase;
       font-weight: 700;
       margin-bottom: 10px;
     }
+
     &__tecnologies {
       display: flex;
       gap: 18px;
@@ -57,14 +77,57 @@
         font-weight: 500;
       }
     }
+
     &__buttons {
       display: flex;
       gap: 32px;
+
+      @include breakpoint(desktop) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 50px;
+        z-index: 3;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        background-color: rgba(0, 0, 0, 0.75);
+        margin-bottom: 20px;
+        a {
+          position: relative;
+          z-index: 4;
+        }
+      }
+    }
+
+    @include breakpoint(desktop) {
+      &:hover {
+        .projects__article__buttons {
+          opacity: 1;
+          visibility: visible;
+        }
+
+        .projects__article__img {
+          filter: brightness(0.8);
+        }
+      }
     }
   }
+
   &__content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
   }
+}
+
+div.projects__content {
+  display: flex;
+  flex-direction: column;
 }

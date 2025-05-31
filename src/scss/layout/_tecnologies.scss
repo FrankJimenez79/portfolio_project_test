@@ -17,6 +17,11 @@
     gap: 50px;
     margin-bottom: 100px;
   }
+  @include breakpoint(desktop) {
+    margin-top: 72px;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 140px;
+  }
   &__item {
     &__title {
       font-size: 32px;

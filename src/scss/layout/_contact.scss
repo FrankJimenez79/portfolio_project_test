@@ -10,6 +10,14 @@
     margin-right: auto;
     margin-bottom: 100px;
   }
+  @include breakpoint(desktop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    justify-content: start;
+    align-items: start;
+    gap: 120px;
+  }
   img.spiral-contact {
     position: absolute;
     left: -258px;
@@ -17,6 +25,10 @@
     @include breakpoint(tablet) {
       left: -434px;
       bottom: -67px;
+    }
+    @include breakpoint(desktop) {
+      left: -300px;
+      bottom: -47px;
     }
   }
   &__title {
@@ -27,6 +39,10 @@
     @include breakpoint(tablet) {
       font-size: 72px;
     }
+    @include breakpoint(desktop) {
+      text-align: start;
+      margin-bottom: 36px;
+    }
   }
   &__subtitle {
     font-size: 16px;
@@ -36,6 +52,9 @@
     color: $grey;
     @include breakpoint(tablet) {
       font-size: 20px;
+    }
+    @include breakpoint(desktop) {
+      text-align: start;
     }
   }
   &__form {
